@@ -1,24 +1,11 @@
-# README
+# Breakdown of a Web Request
+## 1. The client sends an HTTP request
+The client is the browser or whatever is making the request.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 2. The server composes some type of response
+The server composes a response. The response is typically composed of HTML, JSON, XML etc
 
-Things you may want to cover:
+## 3. The server sends back the response
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 4. The client replaces the content of the browser with the response
+AKA REFRESHES THE PAGE
