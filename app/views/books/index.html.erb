@@ -1,33 +1,17 @@
-<div class='ui centered grid'>
-  <div class='two wide column'></div>
-  <div class='six wide column'>
-    <%= form_tag '/books', method: :get, class: 'ui form' do %>
-      <div class="field">
-        <label>Search Books</label>
-        <%= text_field_tag :search, nil, placeholder: 'Enter search term' %>
-      </div>
-      <%= submit_tag 'Search Books', class: 'ui blue button' %>
-    <% end %>
-  </div>
+<div class='seven wide column'>
+  <div class="ui relaxed divided list">
 
-  <div class='six wide column'>
-    <div class="ui relaxed divided list">
-
-      <% @books.each do |book| %>
-        <div class="item">
-          <i class="large book middle aligned icon"></i>
-          <div class="content">
-            <%= link_to book.title, book_path(book), class: 'header' %>
-            <div class="description">
-              <%= book.author.name %>
-            </div>
+    <% @books.each do |book| %>
+      <div class="item">
+        <i class="large book middle aligned icon"></i>
+        <div class="content">
+          <%= link_to book.title, book_path(book), class: 'header' %>
+          <div class="description">
+            <%= book.author.name %>
           </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
 
-    </div>
   </div>
-
-  <div class='two wide column'></div>
-
 </div>
